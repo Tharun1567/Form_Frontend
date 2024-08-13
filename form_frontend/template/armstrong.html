@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This page is for form page</title>
+</head>
+<body>
+    <h1>ARMSTRONG PAGE</h1>
+    <hr>
+    <br>
+    <form method="POSt">{% csrf_token %}
+        <label for="n1" >Number: </label>
+        <input name="num" id="n1" type="number" placeholder="Enter number" required>
+        <br><br>
+        <button>submit</button>
+        <br>
+    </form><br>
+    {% if res %}
+        The given number is: Armstrong
+    {% else %}
+        The given number is: Notarmstrong
+    {% endif %}
+    
+</body>
+</html>

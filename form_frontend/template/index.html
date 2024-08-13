@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is form page</title>
+</head>
+<body>
+    <form method="POST">{% csrf_token %}
+        <label for="n1" >Name: </label>
+        <input name="sname" id="n1" type="text" placeholder="Enter name"  required>
+        <br><br>
+        <button>submit</button>
+    </form>
+    <h2>Hey Man :{{ res }}</h2>
+</body>
+</html>

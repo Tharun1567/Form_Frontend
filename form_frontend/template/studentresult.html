@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>STUDENTRESULT PAGE</h1>
+    <hr>
+    <br>
+    <from method="POST"> {% csrf_token %}
+        <label for="id1">Roll Number </label>
+        <input name="num1" id="id1" type="number" placeholder="enter roll number" required>
+        <button>submit</button>
+
+    </from>
+    {% if result %}
+        the result of the student is:
+        <h1> Roll number :{{ result.id }}</h1>
+        <h1> Name :{{ result.Name }}</h1>
+        <h1> Total subjects {{ result.total_sub }}</h1>
+        <h1> Pass subjects {{ result.pass_sub }}</h1>
+        <h1> Fail subjects {{ result.fail_sub }}</h1>
+    {% else %}
+    <h1>Provide a valid Roll Number</h1>
+    {% endif %}
+</body>
+</html>
